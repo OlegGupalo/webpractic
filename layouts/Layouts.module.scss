@@ -4,7 +4,9 @@
     height: 100vh;
 }
 .backgroundImage {
-    background-image: url('../images/cambridge.jpeg');
+    filter: brightness(70%);
+    background:
+    url('../images/cambridge.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
