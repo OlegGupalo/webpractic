@@ -31,7 +31,6 @@ export const News: React.FC<NewsProps> = ({items}) => {
             
             )}
         </Carousel>
-            
         </>
     )
 }

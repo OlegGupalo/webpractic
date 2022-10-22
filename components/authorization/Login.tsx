@@ -13,7 +13,7 @@ export const LoginForm: React.FC = () => {
         <Box sx={{
             width: '500px',
             position: 'relative',
-        }}>
+        }} classes={{root: styles.box}}>
             <form>
                 <TextField 
                     
@@ -36,16 +36,13 @@ export const LoginForm: React.FC = () => {
                     >
                         <VisibilityIcon />
                     </IconButton>
-                </Box>
-                
-                <Button fullWidth variant="contained" size="large" sx={{marginTop: '15px'}}>
-                    Войти
-                </Button>
+                </Box>                
+                <Button fullWidth variant="contained" size="large" sx={{marginTop: '15px'}} classes={{root: styles.enter}}>Войти</Button>
             </form>
-            <Box className="mt-20">
+            <Box className="mt-20" classes={{root: styles.mt}}>
                 <Link href={{
                     pathname: '/auth/register'
-                }}>Нет аккаунта? Зарегестрируйся</Link>
+                }}>Нет аккаунта? Зарегистрироваться</Link>
             </Box>
         </Box>
     </div>)

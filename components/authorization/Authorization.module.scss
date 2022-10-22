@@ -5,6 +5,15 @@
     height: calc(100vh - 64px);
 }
 
-.btton {
-    background-color: aquamarine;
+.mt a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.enter{
+    background-color: #52616B;
+}
+.enter:hover{
+    background-color: #C9D6DF;
+    color: #52616B;
 }

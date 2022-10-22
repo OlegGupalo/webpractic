@@ -20,8 +20,8 @@ const items = [
 
 export const Header: React.FC = () => {
     return (<>
-        <AppBar position="static">
-            <Container>
+        <AppBar position="static" classes={{root: styles.header}}>
+            <Container classes={{root: styles.container}}>
                 <Toolbar sx={{
                     display: 'flex',
                     justifyContent: 'space-between'
@@ -48,11 +48,11 @@ export const Header: React.FC = () => {
 
                         )}
                     </Toolbar>
-                    <Button variant="contained" color="error">Account</Button>
+                    <Button variant="contained" color="error" classes={{root: styles.button1}}>Account</Button>
                     <Link href={{
                         pathname: '/auth/login'
                     }}>
-                        <Button variant="contained" color="error">
+                        <Button variant="contained" color="error" classes={{root: styles.button}}>
                             Войти
                         </Button>
                     </Link>
