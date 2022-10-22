@@ -3,30 +3,14 @@ import Link from "next/link";
 import React from "react";
 import styles from './Header.module.scss'
 
-const drawer = (
-    <Box>
-        <List>
-            <ListItem>
-                Главная
-            </ListItem>
-            <ListItem>
-                Другое
-            </ListItem>
-            <ListItem>
-                Остальное
-            </ListItem>
-        </List>
-    </Box>
-)
-
 const items = [
     {
         title: 'Главная',
         href: '/'
     }, 
     {
-        title: 'Остальное',
-        href: '/'
+        title: 'Расписание',
+        href: '/timetable'
     }, 
     {
         title: 'Другое',
@@ -48,14 +32,20 @@ export const Header: React.FC = () => {
                         width: '500px'
                     }}>
                         {items.map((item,key) => 
-                            <Button size='large' component='p' key={key} variant="contained" className={styles.text} color="success">
-                                <Link href={{
-                                    pathname: item.href
-                                }}>
-                                    {item.title}
+                            <Link href={{
+                                pathname: item.href
+                            }}>
+                                <Button 
+                                    size='large' 
+                                    component='p' 
+                                    key={key} 
+                                    variant="contained" 
+                                    className={styles.text} 
+                                    color="success">
+                                        {item.title}
+                                </Button>
+                            </Link>
 
-                                </Link>
-                            </Button>
                         )}
                     </Toolbar>
                     <Button variant="contained" color="error" classes={{root: styles.button1}}>Account</Button>

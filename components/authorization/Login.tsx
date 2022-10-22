@@ -36,8 +36,7 @@ export const LoginForm: React.FC = () => {
                     >
                         <VisibilityIcon />
                     </IconButton>
-                </Box>
-                
+                </Box>                
                 <Button fullWidth variant="contained" size="large" sx={{marginTop: '15px'}} classes={{root: styles.enter}}>Войти</Button>
             </form>
             <Box className="mt-20" classes={{root: styles.mt}}>

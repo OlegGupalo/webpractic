@@ -25,8 +25,8 @@ export const News: React.FC<NewsProps> = ({items}) => {
             PrevIcon={<ImportContacts />}
         >
             {items.map((item,key) => 
-                    <Paper elevation={6} classes={{root: styles.paper}}>
-                        <NewsItem key={key} {...item}  />
+                    <Paper key={key} elevation={6} classes={{root: styles.paper}}>
+                        <NewsItem {...item} />
                     </Paper>
             
             )}
