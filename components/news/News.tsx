@@ -26,12 +26,11 @@ export const News: React.FC<NewsProps> = ({items}) => {
         >
             {items.map((item,key) => 
                     <Paper elevation={6} classes={{root: styles.paper}}>
-                        <NewsItem key={key} {...item} />
+                        <NewsItem key={key} {...item}  />
                     </Paper>
             
             )}
         </Carousel>
-            
         </>
     )
 }

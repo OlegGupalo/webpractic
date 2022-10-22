@@ -60,13 +60,13 @@ export const RegisterForm: React.FC = () => {
                     variant="contained" 
                     size="large" 
                     sx={{marginTop: '15px'}}>
-                        Зарегестрироваться
+                        Зарегистрироваться
                 </Button>
             </form>
             <Box className="mt-20">
                 <Link href={{
                     pathname: '/auth/login'
-                }}>Уже есть аккаунт? Войди</Link>
+                }}>Уже есть аккаунт? Войти</Link>
             </Box>
         </Box>
     </div>
