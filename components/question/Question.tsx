@@ -1,4 +1,5 @@
 import { Box, Button, Grid, TextField, Toolbar, Typography } from "@mui/material"
+import Image from "next/image"
 import styles from './Question.module.scss'
 
 export const Question = () => {
@@ -49,6 +50,5 @@ export const Question = () => {
                     >Задать вопрос</Button>
                     
             </Box>
-        </Box>
-    )
+        </Box>)
 }

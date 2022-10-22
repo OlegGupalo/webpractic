@@ -1,4 +1,11 @@
 .container {
     max-width: 1080px;
     margin: auto;
+    height: 100vh;
+}
+.backgroundImage {
+    background-image: url('../images/cambridge.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

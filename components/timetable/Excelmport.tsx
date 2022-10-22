@@ -10,10 +10,6 @@ interface ExcelImportProps {
     state: RowCol
 }
 
-const ExcelImport = ({state}) => {
-
-}
-
 class ExcelImport extends React.Component {
     state = {
         cols: [],
