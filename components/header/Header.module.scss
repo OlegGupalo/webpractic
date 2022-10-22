@@ -1,3 +1,43 @@
+.header{
+    background: linear-gradient(to top, #e0e4e6, #eef2f3);
+    .container{
+        display:inline-flex;
+    }
+}
 .text {
+    height: 40px;
     font-family: 'Montserrat', sans-serif !important;
+    background-color: #F0F5F9;
+    color: black;
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+}
+.text:hover{
+    background-color: #C9D6DF;
+}
+.button1{
+    margin-left: 22rem;
+    
+}
+.button, .button1{
+
+    float: right;
+    margin-right: 50px;
+    height: 40px;
+    background-color: #F0F5F9!important;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.button:hover, .button1:hover{
+    background-color: #C9D6DF!important;
+}
+.profile{
+    margin-left: 10px;
+    float: right;
+    height: 40px;
 }

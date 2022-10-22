@@ -51,7 +51,7 @@ export const RegisterForm: React.FC = () => {
                     >
                         <MenuItem value={10}>Студент</MenuItem>
                         <MenuItem value={20}>Преподаватель</MenuItem>
-                        <MenuItem value={30}>Администратор</MenuItem>
+                        <MenuItem value={30}>Сотрудник</MenuItem>
                     </Select>
                 </FormControl>
                 
@@ -59,14 +59,14 @@ export const RegisterForm: React.FC = () => {
                     fullWidth 
                     variant="contained" 
                     size="large" 
-                    sx={{marginTop: '15px'}}>
-                        Зарегестрироваться
+                    sx={{marginTop: '15px'}} classes={{root: styles.enter}}>
+                        Зарегистрироваться
                 </Button>
             </form>
             <Box className="mt-20">
                 <Link href={{
                     pathname: '/auth/login'
-                }}>Уже есть аккаунт? Войди</Link>
+                }}><a className={styles.mta}>Уже есть аккаунт? Войти</a></Link>
             </Box>
         </Box>
     </div>
