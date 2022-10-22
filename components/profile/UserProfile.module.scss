@@ -1,0 +1,29 @@
+.userBlock {
+    display: 'flex';
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    padding:20px;
+    background-color: #152733;
+}
+
+.userBlock span {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.userInfo {
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.usernameBlock {
+    text-align: center;
+}

@@ -5,8 +5,8 @@ import styles from './Question.module.scss'
 export const Question = () => {
     return (
         <Box sx={{
-            backgroundImage: 'linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B)',
-            boxShadow: '0 4px 15px 0 rgba(236, 116, 149, 0.75)',
+            backgroundImage: 'linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376)',
+            boxShadow: '0 4px 15px 0 rgba(45, 54, 65, 0.75)',
             margin: '75px 0px 0px 0px',
             borderRadius: '80px',
             paddingBottom: '20px'
@@ -30,7 +30,6 @@ export const Question = () => {
                                     fontWeight: '700',
                                     fontSize: '20px',
                                     backgroundColor: 'wheat',
-                                    borderRadius: '20px',
                                 }}}
                             />
                             <TextField 
@@ -43,7 +42,6 @@ export const Question = () => {
                                     fontWeight: '700',
                                     fontSize: '20px',
                                     backgroundColor: 'wheat',
-                                    borderRadius: '20px',
                                 }}} 
                             />
                     </Grid>

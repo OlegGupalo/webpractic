@@ -56,7 +56,13 @@ export const Header: React.FC = () => {
                             Войти
                         </Button>
                     </Link>
-                    
+                    <Link href={{
+                        pathname: '/profile'
+                    }}>
+                        <Button variant="contained" color="info">
+                            Профиль
+                        </Button>
+                    </Link>
                 </Toolbar>
                 
             </Container>

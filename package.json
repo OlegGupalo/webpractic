@@ -16,6 +16,7 @@
     "@mui/material": "^5.10.10",
     "@reduxjs/toolkit": "^1.8.6",
     "axios": "^1.1.3",
+    "bootstrap": "^5.2.2",
     "file-loader": "^6.2.0",
     "macro-css": "^1.0.5",
     "next": "12.3.1",
