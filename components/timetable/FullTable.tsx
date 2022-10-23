@@ -1,5 +1,6 @@
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 function createData(
     name: string,
@@ -19,22 +20,17 @@ const rows = [
     createData('Gingerbread', 356, 16.0, 49, 3.9),
   ];
 
-export const FullTable = () => {
+export const FullTable = ({}) => {
+    const {user} = useSelector(state => state.shedule)
+
     return (
-        <>
-            <TableContainer components={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <div style={{backgroundColor: 'wheat'}}>
+        <TableContainer components={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
         </TableHead>
-        <TableBody>
-          {rows.map((row) => (
+        {/* <TableBody>
+          {user.map((row) => (
             <TableRow
               key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -52,9 +48,9 @@ export const FullTable = () => {
               <TableCell align="right">{row.protein}</TableCell>
             </TableRow>
           ))}
-        </TableBody>
+        </TableBody> */}
       </Table>
             </TableContainer>
-        </>
+        </div>
     )
 }

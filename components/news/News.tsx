@@ -6,10 +6,12 @@ import Carousel from "react-material-ui-carousel"
 import { ImportContacts } from "@mui/icons-material"
 
 interface NewsItemProps {
+    _id: string,
     title: string,
-    body: string,
-    category: string,
-    createdAt: string,
+    content: string,
+    created_at: string,
+    updated_at: string,
+    image: string
 }
 
 interface NewsProps {
@@ -17,18 +19,25 @@ interface NewsProps {
 }
 
 export const News: React.FC<NewsProps> = ({items}) => {
+    const sliceImage = (oldPath: string, newPath: string) => {
+        const array = oldPath.split('/')
+        array[2] = newPath
+        let newImage = array.join('/')
+        return newImage
+    }
+    console.log(items)
     return (
         <>
-        <Carousel
+        <Carousel   
             animation="slide"
             NextIcon={<ImportContacts />}
-            PrevIcon={<ImportContacts />}
-        >
-            {items.map((item,key) => 
+            PrevIcon={<ImportContacts />}>
+
+            {items && items.data?.map((item: NewsItemProps, key: number) => 
                     <Paper key={key} elevation={6} classes={{root: styles.paper}}>
-                        <NewsItem {...item} />
+                        <NewsItem {...item} newImages={sliceImage(item.image, 'cb37-83-234-174-21.eu.ngrok.io')} />
                     </Paper>
-            
+                
             )}
         </Carousel>
             
