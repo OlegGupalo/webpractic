@@ -1,5 +1,6 @@
 import { AppBar, Box, Button, Container, Drawer, List, ListItem, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
+import { parseCookies } from "nookies";
 import React from "react";
 import styles from './Header.module.scss'
 
@@ -11,11 +12,7 @@ const items = [
     {
         title: 'Расписание',
         href: '/timetable'
-    }, 
-    {
-        title: 'Другое',
-        href: ''
-    }
+    },
 ]
 
 export const Header: React.FC = () => {
@@ -39,30 +36,32 @@ export const Header: React.FC = () => {
                                     size='large' 
                                     component='p' 
                                     key={key} 
-                                    variant="contained" 
                                     className={styles.text} 
-                                    color="success">
+                                    color="secondary">
                                         {item.title}
                                 </Button>
                             </Link>
 
                         )}
                     </Toolbar>
-                    <Button variant="contained" color="error">Account</Button>
-                    <Link href={{
-                        pathname: '/auth/login'
-                    }}>
-                        <Button variant="contained" color="error">
-                            Войти
-                        </Button>
-                    </Link>
-                    <Link href={{
-                        pathname: '/profile'
-                    }}>
-                        <Button variant="contained" color="info">
-                            Профиль
-                        </Button>
-                    </Link>
+                    {parseCookies().pepper
+                        ? <Link href={{
+                            pathname: '/profile'
+                        }}>
+                            <Button variant="contained" color="info">
+                                Профиль
+                            </Button>
+                        </Link>
+                        : <Link href={{
+                            pathname: '/auth/login'
+                        }}>
+                            <Button variant="contained" color="error">
+                                Войти
+                            </Button>
+                        </Link>
+                    }
+                    
+                    
                 </Toolbar>
                 
             </Container>
